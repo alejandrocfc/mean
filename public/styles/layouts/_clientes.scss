@@ -1,0 +1,429 @@
+#clientes {
+    display: block;
+    position: relative;
+    .header-eachpage {
+      h2 {
+        text-align: center;
+      }
+    }
+    >header {
+      > .skewbars {
+        span:before {
+          background: $white url('../images/Pattern.png') repeat 0 0/250px;
+          background-size: inherit;
+        }
+      }
+    }
+    .container-fluid {
+      padding-left: 0;
+      padding-right: 0;
+      h3 {
+        color: $bluebrand;
+        text-align: center;
+        display: block;
+        margin-bottom: 3rem;
+      }
+      .pattern {
+        background: $white url('./images/Pattern.png');
+        background-size: inherit;
+      }
+      .casosimg {
+        position: relative;
+        padding-top: 3rem;
+        background: $white url('../images/Pattern.png');
+        p{
+          color: $darkgrey;
+          text-align: center;
+        }
+        h3 {
+          text-transform: uppercase;
+        }
+        &.slider-desktop {
+          .slider {
+            display: flex;
+            display: -webkit-flex;
+            flex-wrap: wrap;
+            position: relative;
+            height: 40vh;
+            .casosexito {
+              position: relative;
+              background: grey;
+              flex-basis: 33.3%;
+              max-height: 35vh;
+              img {
+                height: 35vh;
+                min-height: 100%;
+                width:100%;
+              }
+              &:hover {
+                &:before {
+                  content: '';
+                  display: block;
+                  position: absolute;
+                  top: 5%;
+                  left: 5%;
+                  width: 90%;
+                  height: 90%;
+                  background-color: rgba(48, 80, 117, 0.5);
+                  z-index: 7;
+                  transition: background-color 2s ease;
+
+                }
+                .imghover{
+                  .botonver{
+                    opacity: 1;
+                    transition: opacity 1s;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        &.slider-mobile {
+          .slider {
+            .slick-slider,
+            .slick-track {
+              height: 100%;
+              height: 20vh;
+              display: flex;
+              align-items: center;
+            }
+            .slick-slide {
+              position: relative;
+              width: 100%;
+              height: 100%;
+              img{
+                height: 100%;
+              }
+            }
+            .slick-arrow {
+              height: 100%;
+              width: 40px;
+              border: 0;
+              border-left: 1px solid $darkgrey;
+              border-right: 1px solid $darkgrey;
+              background-color: transparent;
+              font-size: 0;
+              position: absolute;
+              z-index: 2;
+              top: 50%;
+              transform: translateY(-50%);
+              &:focus {
+                outline: none;
+              }
+              &.slick-prev {
+                left: 0px;
+                &:before {
+                  content: '';
+                  display: block;
+                  height: 30px;
+                  width: 30px;
+                  background-image: url('../images/Boton_Izquierda_w.svg');
+                  background-position: center;
+                  background-size: contain;
+                }
+              }
+              &.slick-next {
+                right: 0px;
+                &:before {
+                  content: '';
+                  display: block;
+                  height: 30px;
+                  width: 30px;
+                  background-image: url('../images/Boton_Derecha_w.svg');
+                  background-position: center;
+                  background-size: contain;
+                }
+              }
+            }
+          }
+        }
+        .imghover {
+          position: absolute;
+          z-index: 10;
+          color: $white;
+          top: 15%;
+          margin-left: 50%;
+          transform: translateX(-50%);
+          text-align: center;
+          height: 20vh;
+          img.logo {
+            height: 20vh !important;
+            width: 100% !important;
+          }
+          .botonver{
+            color:white;
+            background: transparent;
+            border: 1px solid white;
+            padding: 3px;
+            font-size: 0.7rem;
+            opacity: 0;
+          }
+        }
+      }
+      .algunos {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        @extend .container;
+      }
+      .logoClientes {
+        height: 30vh;
+        margin: 2rem;
+        display: flex;
+        justify-content: center;
+        img {
+          height: 100%;
+          width: auto;
+        }
+      }
+      .testimonios {
+        margin-bottom: 3rem;
+        .row {
+          color: $darkgrey;
+          height: 100%;
+          text-align: center;
+          font-size: 0.8rem;
+          img {
+            border-radius: 50%;
+            height: 150px;
+            width: 150px;
+            margin: 2rem;
+            border: 1px solid $darkgrey;
+          }
+          .col-md-4:nth-child(2) {
+            border-left: 1px solid $lightgrey;
+            border-right: 1px solid $lightgrey;
+          }
+          .colorblue{
+            color: $bluebrand;
+            font-weight: 900;
+          }
+        }
+      }
+      .content {
+        background-color: $white;
+        height: 35vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .carrousel {
+          height: 30vh;
+          width: 80%;
+          min-width: 800px;
+          padding: 25px;
+          .slick-slider,
+          .slick-track {
+            height: 100%;
+            display: flex;
+            align-items: center;
+          }
+          .slick-slide {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            &.logosC {
+              position: relative;
+              z-index: 2;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              color: $white;
+              text-align: center;
+              max-width: 950px;
+              margin: 10px;
+              max-width: 100%;
+              max-height: 100%;
+              img {
+                margin: 2px;
+              }
+            }
+          }
+          .slick-arrow {
+            height: 100%;
+            width: 40px;
+            border: 0;
+            border-left: 1px solid $darkgrey;
+            border-right: 1px solid $darkgrey;
+            background-color: $white;
+            font-size: 0;
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            transform: translateY(-50%);
+            &:focus {
+              outline: none;
+            }
+            &.slick-prev {
+              left: -40px;
+              &:before {
+                content: '';
+                display: block;
+                height: 30px;
+                width: 30px;
+                background-image: url('../images/Boton_Izquierda.svg');
+                background-position: center;
+                background-size: contain;
+              }
+            }
+            &.slick-next {
+              right: -40px;
+              &:before {
+                content: '';
+                display: block;
+                height: 30px;
+                width: 30px;
+                background-image: url('../images/Boton_Derecha.svg');
+                background-position: center;
+                background-size: contain;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #casosdeexito {
+    background: $white url('../images/Pattern.png');
+    .container-fluid {
+      padding-top: 10vh;
+      padding-left: 0;
+      padding-right: 0;
+      overflow: hidden;
+      h4 {
+        margin: 4rem 0 2rem 0;
+        text-transform: uppercase;
+      }
+      h6 {
+        color: black;
+        margin: 1rem 0;
+      }
+      p {
+        color: $darkgrey;
+        margin: 2rem 0;
+        font-size: 1rem;
+      }
+      .icocaso {
+        align-self: center;
+      }
+      .end {
+        border-bottom: 3px solid $lightgrey;
+      }
+      .imgcaso {
+        width: 100%;
+        height: auto;
+        min-height: 30vh;
+        max-height: 35vh;
+      }
+      .imgpro {
+        width: 100%;
+        height: auto;
+        min-height: 35vh;
+        max-height: 45vh;
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        img{
+          height: auto;
+          width: 50%;
+          &:nth-child(2){
+            position: absolute;
+            left: 50%;
+
+          }
+        }
+      }
+      .otroscasos {
+        width: 100%;
+        margin-bottom: 25px;
+        &.slick {
+          opacity: 0;
+          transition: all linear 124ms;
+          &.slick-initialized {
+            opacity: 1;
+          }
+          //botones slider
+          .slick-arrow {
+            border: 0;
+            background-color: transparent;
+            font-size: 0;
+            height: 100%;
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            transform: translateY(-50%);
+            &:focus {
+              outline: none;
+            }
+            &.slick-prev {
+              left: 0;
+              &:before {
+                content: '';
+                display: block;
+                width: 50px;
+                height: 50px;
+                background-image: url('../images/Boton_Izquierda_w.svg');
+                background-position: center;
+                background-size: contain;
+              }
+            }
+            &.slick-next {
+              right: 0;
+              &:before {
+                content: '';
+                display: block;
+                width: 50px;
+                height: 50px;
+                background-image: url('../images/Boton_Derecha_w.svg');
+                background-position: center;
+                background-size: contain;
+              }
+            }
+          }
+        }
+
+        .casosexito {
+          position: relative;
+          &:hover:before {
+            opacity: 1
+          }
+          &:before {
+            content: "";
+            opacity: 0;
+            display: block;
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            width: 90%;
+            height: 90%;
+            background-color: rgba(48,80,117,.5);
+            z-index: 7;
+            transition: all .25s ease;
+            z-index: 0;
+          }
+          .imghover, .botonver {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%)
+          }
+          .botonver {
+            top: 90%;
+            z-index: 33;
+            color: #fff;
+            background: transparent;
+            border: 1px solid #fff;
+            padding: 3px;
+            font-size: .7rem;
+            min-width: 110px;
+            text-align: center;
+          }
+        }
+
+      }
+    }
+  }
+  /*$white url(/wp-content/themes/humancapital/assets/images/Pattern.png');*/

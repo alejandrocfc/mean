@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <base href="/">
+  <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <title>CreeTEC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/principal.css">
+  <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
+  <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-route/angular-route.min.js"></script>
+  <script src="bower_components/angular-scroll/angular-scroll.js"></script>
+  <script src="bower_components/slick-carousel/slick/slick.js"></script>
+  <script src="bower_components/angular-slick-carousel/dist/angular-slick.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- ANGULAR CUSTOM -->
+  <script src="js/controllers/MainCtrl.js"></script>
+  <script src="js/controllers/NerdCtrl.js"></script>
+  <script src="js/services/NerdService.js"></script>
+  <script src="js/controllers/GeekCtrl.js"></script>
+  <script src="js/services/GeekService.js"></script>
+  <script src="js/appRoutes.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body ng-app="sampleApp">
+<div class="wrap" ng-controller="MainController">
+  <header class="menu">
+    <div class="header">
+      <div class="container">
+        <nav>
+          <a class="navbar-brand" href="index.html">
+            <img src="http://lorempixel.com/300/94/" alt="" />
+            <span class="toggleMenuIcon"></span>
+          </a>
+          <div id="menu">
+            <div class="menu-menu-principal-container">
+              <ul id="menu-menu-principal">
+                <li><a href="#section-1" du-smooth-scroll du-scrollspy>Nosotros</a></li>
+                <li><a href="#section-2" du-smooth-scroll du-scrollspy>Para Quien</a></li>
+                <li><a href="#section-3" du-smooth-scroll du-scrollspy>Para Que</a></li>
+                <li><a href="#section-4" du-smooth-scroll du-scrollspy>Solicitar</a></li>
+                <li><a href="#section-5" du-smooth-scroll du-scrollspy>Contáctenos</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!--<h1>Angular.js Scrollspy Example</h1>-->
+
+
+  <div>
+    <slick ng-if="slickConfig1Loaded">
+      <div ng-repeat="i in todos">
+        <div class="info">
+          <h2 class="entry-title">{{ i.content }}</h2>
+        </div>
+        <div class="bg-img">
+          <img src="{{i.image}}">
+        </div>
+      </div>
+    </slick>
+  </div>
+
+  <section class="sectionscroll" id="section-1">
+    <h2>Section 1</h2>
+    <p>Bacon ipsum dolor sit amet sausage tail capicola ground round hamburger ham hock. Short ribs pig andouille meatball, pastrami tri-tip fatback ham hock shank kielbasa swine. Rump pancetta jerky kielbasa doner beef ribs tongue hamburger strip steak drumstick andouille shoulder shank flank. Swine drumstick meatball pig beef sausage strip steak.</p>
+
+    <img src="http://lorempixel.com/1000/500/" alt="" />
+  </section>
+
+  <section class="sectionscroll" id="section-2">
+    <section class="uco" style="background-image: url('http://humancapital-hc.com/wp-content/uploads/2017/04/UCO.png');" id="ucohome">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-6 description">
+            <h4>ASDASD</h4>
+
+            <span class="hr"></span>
+
+            <p>ASDASD</p>
+            <span class="small"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-lg-6 more-info nopadding">
+          <span class="icon"></span>
+          <h2 >QWEQWE</h2>
+          <span class="hc-icon"></span>
+          <div class="button">
+            <span><a  href="*">conoce más información</a></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <section class="sectionscroll" id="section-3">
+    <h2>Section 3</h2>
+    <p>Shank fatback pastrami short loin, turkey jowl kielbasa ribeye chicken jerky drumstick flank ham. Swine shankle pork belly kielbasa shoulder flank jowl, sirloin doner. Kevin tri-tip bresaola leberkas. Swine ball tip cow strip steak. Ham filet mignon pork chop, pork fatback andouille pork loin shoulder jowl swine strip steak turducken prosciutto rump.</p>
+
+    <img src="http://lorempixel.com/1000/400/" alt="" />
+
+    <p>Tongue tri-tip pastrami, shoulder rump pork belly ground round. Ham hock chuck leberkas doner, strip steak corned beef tri-tip capicola. Rump turkey ham sausage shankle. Flank shankle pork chop ham hock. Shankle venison kielbasa, pancetta swine beef ball tip t-bone bacon hamburger ground round ribeye flank. Turducken bacon bresaola, chicken kevin boudin ball tip strip steak filet mignon pork turkey shank ground round. Kielbasa fatback prosciutto pork chop, jerky ground round leberkas boudin ball tip beef shankle shoulder swine brisket.</p>
+  </section>
+
+  <section class="sectionscroll" id="section-4">
+    <h2>Section 4</h2>
+    <img src="http://lorempixel.com/1000/600/" alt="" />
+
+    <p>Shoulder cow tenderloin chuck, pork chop jerky doner leberkas. Chuck sausage hamburger, kevin beef pork chop pork shoulder ground round ball tip turducken flank. Bresaola tri-tip meatloaf, salami venison tail pig shank shankle jowl sausage brisket cow biltong turducken. Swine turducken hamburger ball tip short loin prosciutto kevin jowl tri-tip. Doner meatloaf pork brisket.</p>
+  </section>
+  <footer>
+    <button ng-click="toTheTop()">Take me back!</button> or <button ng-click="toSection3()">To section 3</button>
+  </footer>
+</div>
+<!--<script>
+    angular.module('myApp', ['duScroll', 'slickCarousel']).
+      controller('MyCtrl', function($scope, $document){
+
+        $scope.number1 = [1, 2, 3];
+        $scope.slickConfig1Loaded = true;
+        $scope.updateNumber1 = function () {
+            $scope.slickConfig1Loaded = false;
+            $scope.number1[2] = '123';
+            $scope.number1.push(Math.floor((Math.random() * 10) + 100));
+            $timeout(function () {
+                $scope.slickConfig1Loaded = true;
+            }, 5);
+        };
+        $scope.slickCurrentIndex = 0;
+        $scope.slickConfig = {
+            dots: true,
+            autoplay: false,
+            initialSlide: 3,
+            infinite: true,
+            autoplaySpeed: 3000,
+            method: {}
+        };
+
+          $scope.item = 1;
+
+        $scope.toTheTop = function() {
+          $document.scrollTopAnimated(0, 5000).then(function() {
+            console && console.log('You just scrolled to the top!');
+          });
+        };
+        var section3 = angular.element(document.getElementById('section-3'));
+        $scope.toSection3 = function() {
+          $document.scrollToElementAnimated(section3);
+        }
+      }
+    ).value('duScrollOffset', 30);
+</script>-->
+</body>
+</html>

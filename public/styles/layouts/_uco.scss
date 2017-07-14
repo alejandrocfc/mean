@@ -1,0 +1,479 @@
+//uco home
+@media (max-width: 991px) {
+  section.uco {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: $bluebrand;
+    overflow: hidden;
+    min-height: 580px;
+     .container {
+      margin: 0;
+      padding: 0;
+       overflow: hidden;
+    }
+    .description {
+      background-color: $bluebrand;
+      color: #fff;
+      padding: 3rem 2rem 4rem;
+      h4 {
+        margin: 0;
+        color: white;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        font-size: 2rem;
+      }
+      span.hr {
+        width: 8rem;
+        height: 1px;
+        background-color: #fff;
+        margin: 2rem 0;
+        display: block;
+        position: relative;
+        &:before {
+          content: '';
+          background: $bluebrand url('../images/Separador_2.svg') no-repeat center/450%;
+          width: 40px;
+          height: 40px;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      p{
+        font-size: 1rem;
+      }
+    }
+    .more-info {
+      background: transparent url('../images/4.png') no-repeat 50%/cover;
+      background: transparent url('http://humancapital-hc.com/wp-content/uploads/2017/04/UCO.png') no-repeat 50%/cover;
+      min-height: 15rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      padding: 1rem 0 2rem;
+      &:before, &:after {
+        content: '';
+        display: block;
+        background-color: $bluebrand;
+        width: 50%;
+        height: 1rem;
+        position: absolute;
+        bottom: 0;
+      }
+      &:before {
+        left: 0;
+        transform-origin: 0 100%;
+        transform: skew(45deg)
+      }
+      &:after {
+        right: 0;
+        transform-origin: 100% 100%;
+        transform: skew(-45deg)
+      }
+      .icon {
+        background: transparent url('http://humancapital-hc.com/wp-content/themes/humancapital/assets/images/uco_icon-home.svg') no-repeat 50%/80px;
+        width: 80px;
+        height: 80px;
+        position: relative;
+        z-index: 0;
+      }
+      h2 {
+        font-size: 42px;
+        text-transform: uppercase;
+        color: #fff;
+      }
+      .button {
+        border-top: 1px solid $bluebrand;
+        border-bottom: 1px solid $bluebrand;
+        width: 100%;
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 400;
+        span {
+          color: $bluebrand;
+          background-color: rgba($white, 0.75);
+          display: block;
+          padding: .5rem 0 .25rem;
+        }
+         &:hover {
+          border: 1px solid $bluebrand;
+          background-color: $bluetrans;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+//desktop
+@media (min-width: 992px) {
+  section.uco {
+    position: relative;
+    background: transparent url('http://humancapital-hc.com/wp-content/themes/humancapital/dist/images/4.png') no-repeat 50%/cover;
+
+    .description {
+      background-color: $bluebrand;
+      min-height: 100%;
+      min-height: 100vh;
+      color: #fff;
+      padding: 5rem 7rem 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 4rem;
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: all 0.6s ease-out;
+      h4 {
+        margin: 0;
+        color: white;
+        text-transform: uppercase;
+      }
+      span.hr {
+        width: 8rem;
+        height: 1px;
+        background-color: #fff;
+        margin: 3rem 0;
+        position: relative;
+        &:before {
+          content: '';
+          background: $bluebrand no-repeat center/450%;
+          width: 40px;
+          height: 40px;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      p {
+        width: 80%;
+        opacity: .6;
+      }
+      span.small {
+        width: 2rem;
+        height: 1px;
+        background-color: #fff;
+        margin-top: 2rem;
+      }
+    }
+    .description.fade-in{
+      opacity: 1;
+      transform: translateX(0);
+      
+    }
+    .more-info {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding-left: 4rem;
+      .icon {
+        background: transparent url(../images/uco_icon-home.svg) no-repeat 50%/120px;
+        width: 120px;
+        height: 200px;
+        margin: -3rem 0;
+        position: relative;
+        z-index: 0;
+      }
+      h2 {
+        font-size: 6.6vw;
+        text-transform: uppercase;
+        color: #fff;
+        position: relative;
+        &:after {
+          content: "";
+          background: transparent url(../images/Separador_2.svg) no-repeat 50%/450%;
+          width: 50px;
+          height: 40px;
+          display: block;
+          position: absolute;
+          bottom: -1.35rem;
+          left: 50%;
+          transform: translate(-50%,-50%);
+        }
+      }
+      .button {
+        border-top: 1px solid $bluebrand;
+        border-bottom: 1px solid $bluebrand;
+        width: 100%;
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: .4rem;
+        font-weight: 400;
+        span{
+          color: $bluebrand;
+          background-color: rgba($white, 0.75);
+          padding: .75rem 2rem;
+          display: inline-block;
+           &:hover{
+            border: 1px solid $bluebrand;
+            background-color: $bluetrans;
+            cursor: pointer;
+            color: white;
+             a{
+               color: white;
+             }
+          }
+        }
+      }
+    }
+  }
+}
+
+//interna uco
+#uco {
+  .container {
+    .col-md-4 {
+      flex: 0 0 31%;
+      max-width: 31%;
+    }
+  }
+  .description {
+    margin-top: 2rem;
+    opacity: .6;
+    text-align: center;
+  }
+  @media (max-width: 992px) {
+    .description {
+      display: none;
+    }
+  }
+  .title {
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: 3.5rem 0 3rem;
+  }
+  @media (max-width: 992px) {
+    .title {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 1rem;
+    }
+  }
+  .eventos {
+    margin: 3rem 0;
+    @media (min-width: 992px) {
+      & > .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        > div {
+          max-width: 30%;
+          flex-basis: 30%;
+        }
+      }
+    }
+    .evento {
+      color: #fff;
+      margin-bottom: 2rem;
+      padding: 1rem;
+      background-color: $bluebrand;
+      overflow: hidden;
+      > div {
+        padding: 0 .5rem;
+      }
+      @media (min-width: 992px) {
+        & > div {
+          padding: 0 1rem;
+        }
+      }
+      figure {
+        margin-bottom: .5rem;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        &:before {
+          content: "";
+          width: 100%;
+          padding: 25% 0;
+          display: block;
+          position: relative;
+          top: 0;
+        }
+        img {
+          position: absolute;
+          width: 100%;
+          height: auto;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+      @media (min-width: 992px) {
+        figure {
+          margin: -17px -17px 8px;
+          width: calc(100% + 34px);
+        }
+      }
+      .evento-info {
+        padding-left: .5rem
+      }
+      @media (min-width: 992px) {
+        .evento-info {
+          padding-left: 0;
+        }
+      }
+      hgroup {
+        margin-bottom: 1rem;
+        h5 {
+          color: #56b0e2;
+          margin-top: 0;
+          text-transform: uppercase;
+        }
+        h6 {
+          font-size: .85rem;
+          font-weight: 400;
+        }
+      }
+      p {
+        font-size: .8rem;
+      }
+      footer {
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 991px) {
+         .line {
+            border-top: 2px solid #fff;
+            margin-top: .75rem;
+            padding-top: .5rem;
+          }
+        }
+        time {
+          font-size: 12px;
+          padding-left: 2rem;
+          position: relative;
+          &:before {
+            content: '';
+            background: transparent url(../images/calendar.svg) no-repeat 50%/25px;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            display: block;
+          }
+        }
+        .boletas {
+          text-align: right;
+          @media (max-width: 991px) {
+            button {
+              background-color: darken($bluebrand, 5);
+              font-size: 12px;
+              text-transform: uppercase;
+              font-weight: 700;
+            }
+          }
+        }
+        @media (min-width: 992px) {
+          .boletas {
+            border-top: 2px solid #fff;
+            margin-top: .75rem;
+            padding-top: .5rem;
+          }
+        }
+        button {
+          background: none;
+          border: 1px solid #689bb7;
+          text-transform: uppercase;
+          font-size: 14px;
+          color: #fff;
+          margin-top: .5rem;
+          transition: all linear 120ms;
+          padding: .125rem .75rem;
+          &:hover {
+            background-color: #56b0e2;
+          }
+        }
+      }
+    }
+  }
+  .eventos-anteriores {
+    padding-bottom: 4rem;
+  }
+  .slick {
+    //botones slider
+    .slick-arrow {
+      border: 0;
+      background-color: transparent;
+      font-size: 0;
+      height: 100%;
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      transform: translateY(-50%);
+      &:focus {
+        outline: none;
+      }
+      &.slick-prev {
+        left: 0;
+        &:before {
+          content: '';
+          display: block;
+          width: 50px;
+          height: 50px;
+          background-image: url('../images/Boton_Izquierda_w.svg');
+          background-position: center;
+          background-size: contain;
+        }
+      }
+      &.slick-next {
+        right: 0;
+        &:before {
+          content: '';
+          display: block;
+          width: 50px;
+          height: 50px;
+          background-image: url('../images/Boton_Derecha_w.svg');
+          background-position: center;
+          background-size: contain;
+        }
+      }
+      //bullets slider
+      .slick-dots {
+        display: flex !important;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        li {
+          margin: 0 .5rem;
+          button {
+            border: 0;
+            background-color: none;
+            &:focus {
+              outline: none;
+            }
+          }
+          &:first-child {
+            margin-left: 0;
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 995px) {
+    .slick {
+      margin-bottom: 12rem;
+    }
+  }
+}

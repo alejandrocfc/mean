@@ -1,0 +1,175 @@
+body.popUpOpen {
+  overflow: hidden;
+  div[role="document"] {
+    overflow: hidden;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .mfp-container {
+    padding: 0;
+    .mfp-content {
+      height: 100vh;
+    }
+  }
+  form#formContacto {
+    background-color: #fff;
+    padding: 4rem;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+    padding: .5rem;
+    height: 100%;
+    overflow-y: auto;
+    .step2 {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+    fieldset p {
+      line-height: 2;
+    }
+    input {
+      &[type="text"], &[type="tel"], &[type="email"], &[type="url"] {
+        border-width: 0 0 1px;
+        border-color: #003d73;
+        border-style: solid;
+        padding: 0;
+        line-height: 1;
+        text-align: center;
+        width: initial;
+        font-size: 14px;
+        width: 240px;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    select {
+      border: 2px solid #9f9f9f;
+      border-radius: 2px;
+      background-color: #fff;
+      color: #a1a1a1;
+      font-size: 14px;
+      padding: .25rem .5rem;
+    }
+
+    label#label-upload-cv {
+      border: 2px solid #9f9f9f;
+      padding: .25rem .5rem;
+      border-radius: 2px;
+      color: #a1a1a1;
+      line-height: 1;
+    }
+    input#upload-cv {
+      opacity: 0;
+      width: 1px;
+      height: 1px;
+    }
+
+    textarea {
+      width: 100%;
+      max-width: 100%;
+    }
+
+
+    .submit {
+      text-align: right;
+    }
+    button[type="submit"] {
+      border: 0;
+      background-color: $bluebrand;
+      padding: .5rem 1rem;
+      transition: all linear 120ms;
+      color: #fff;
+      font-size: 14px;
+      text-transform: uppercase;
+      &:hover {
+        background-color: darken($bluebrand, 5);
+      }
+    }
+
+  }
+}
+
+@media (min-width: 501px) {
+  form#formContacto {
+    background-color: #fff;
+    padding: 4rem;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+    .step2 {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+    fieldset p {
+      line-height: 2;
+    }
+    input {
+      &[type="text"], &[type="tel"], &[type="email"], &[type="url"] {
+        border-width: 0 0 1px;
+        border-color: #003d73;
+        border-style: solid;
+        padding: 0;
+        line-height: 1;
+        text-align: center;
+        width: initial;
+        font-size: 14px;
+        width: 260px;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    select {
+      border: 2px solid #9f9f9f;
+      border-radius: 2px;
+      background-color: #fff;
+      color: #a1a1a1;
+      font-size: 14px;
+      padding: .25rem .5rem;
+      min-width: 150px;
+    }
+
+        label#label-upload-cv {
+      border: 2px solid #9f9f9f;
+      padding: .25rem .5rem;
+      border-radius: 2px;
+      color: #a1a1a1;
+      line-height: 1;
+    }
+    input#upload-cv {
+      opacity: 0;
+      width: 1px;
+      height: 1px;
+    }
+
+    textarea {
+      width: 100%;
+      max-width: 100%;
+    }
+
+
+    .submit {
+      text-align: right;
+    }
+    button[type="submit"] {
+      border: 0;
+      background-color: $bluebrand;
+      padding: .5rem 1rem;
+      transition: all linear 120ms;
+      color: #fff;
+      font-size: 14px;
+      text-transform: uppercase;
+      &:hover {
+        background-color: darken($bluebrand, 5);
+      }
+    }
+
+  }
+}

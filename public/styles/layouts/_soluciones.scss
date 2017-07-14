@@ -1,0 +1,201 @@
+#soluciones {
+    background: $white url('../images/Pattern.png');
+    color: $darkergrey;
+
+    .header-eachpage {
+        h2 {
+          color: #fff;
+          font-size: 5vw;
+          text-align: center;
+          margin: auto;
+        }
+    }
+    .headerr {
+        margin: 2rem 0 0;
+        background-color: transparent;
+        animation: zoomIn .8s 1 forwards;
+        animation-delay: .5s;
+        transform: scale(0);
+        @keyframes zoomIn{
+            0%{
+                transform: scale(0);
+                opacity: 0;
+            }
+            100%{
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        .iconosol {
+            max-height: 7rem;
+            height: 7rem;
+            img{width: 100%;
+            height: 100%;}
+        }
+
+    }
+    .csinglesoluciones {
+        text-align: justify;
+        padding-bottom: 4rem;
+        font-size: 1.3rem;
+        color: grey;
+        h3 {
+          margin: 2rem 0 .5rem;
+          letter-spacing: -1px;
+          text-align: center;
+          width: 100%;
+          color: #003d73;
+          font-size: 2.5rem;
+        }
+        h5 {
+            letter-spacing: -1px;
+            font-size: 1.05rem;
+        }
+        .cintern {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem 1rem .5rem;
+            text-align: left;
+            //margin: .8rem;
+            text-align: left;
+            ul {
+                margin: 0;
+            }
+            ul.dashed {
+                list-style-type: none;
+                letter-spacing: 1px;
+                padding-left: 0;
+            }
+            ul.dashed > li {
+                text-indent: -5px;
+            }
+            ul.dashed > li:before {
+                content: '-';
+                text-indent: -5px;
+                margin: 0.4rem;
+            }
+            li {
+                font-size: .8rem;
+            }
+            &.internre {
+                border: none;
+                color: grey;
+                background-color: transparent;
+                font-size: 1.3rem !important;
+                h4 {
+                    color: $bluebrand;
+                    text-transform: uppercase;
+                }
+                img {
+                    margin: 4rem;
+                    margin-bottom: 6rem;
+                }
+            }
+
+        }
+        animation: fadeInUp 1.3s 1;
+        @keyframes fadeInUp{
+            0%{
+                transform: translateY(40px);
+                opacity: 0;
+            }
+            100%{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    }
+    div.solucion {
+        background-color: #fff;
+        color: #b0acb1;
+        .container {
+            border-top: 2px solid #cfcfcf;
+            position: relative;
+            padding-top: 3rem;
+            &:before {
+                content: '';
+                background: #fff url('../images/Separador_g.svg') no-repeat center/450%;
+                width: 40px;
+                height: 40px;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .title {
+                font-size: 1.5rem;
+                letter-spacing: .1rem;
+            }
+        }
+        ::placeholder {
+            color: $bluebrand;
+            text-transform: uppercase;
+        }
+        fieldset {
+            margin-top: 3rem;
+        }
+        input,
+        textarea,
+        select {
+            color: $bluebrand;
+            width: 100%;
+            margin-bottom: 1.5rem;
+            border: 0;
+            border-bottom: 2px solid $bluebrand;
+            background: none;
+            font-size: 14px;
+            vertical-align: bottom;
+            font-family: 'Montserrat';
+            border-radius: 0;
+        }
+        label[for="exampleTextarea"] {
+            color: $bluebrand;
+            font-size: 14px;
+            padding-left: .75rem;
+        }
+        textarea {
+            width: 100%;
+            max-width: 100%;
+            max-height: 120px;
+            color: $bluebrand;
+        }
+        select {
+            text-transform: uppercase;
+            border: 2px solid;
+            border-radius: 2px;
+            height: 2rem;
+        }
+        .button-submit {
+            text-align: right;
+            p {
+                width: 200px;
+                margin-left: auto;
+            }
+        }
+        input[type="submit"] {
+            border: 0;
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 14px;
+            padding: .5rem 1rem;
+            background-color: $bluebrand;
+            transition: all linear 120ms;
+            &:hover {
+                background-color: darken($bluebrand, 5);
+            }
+        }
+    }
+    .color0 {
+        color: black;
+    }
+    .f-w7 {
+        font-weight: 700;
+    }
+    .tcenter {
+        text-align: center;
+    }
+    .no-bg {
+        background-color: transparent;
+    }
+}

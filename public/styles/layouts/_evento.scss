@@ -1,0 +1,247 @@
+#event {
+  .tribe-events-cost{
+        margin: 1.5rem 0;
+        color: darken($darkgrey, 20%);
+        font-size: 14px;
+  }
+  .container {
+    margin-bottom: 3rem;
+    .event {
+      margin-top: 8rem;
+      header {
+        margin-bottom: 4rem;
+        h2, time {
+          color: $bluebrand;
+          font-family: 'Gotham';
+          font-size: 26px;
+          text-transform: uppercase;
+          margin-bottom: 1rem;
+        }
+      }
+      .info {
+        margin-bottom: 4rem;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 400;
+      }
+      section {
+        cursor: default;
+        margin: 1.5rem 0;
+        color: darken($darkgrey, 20%);
+        font-size: 14px;
+        .full-img {
+          width: 100%;
+          //width: 100vw;
+        }
+      }
+    }
+  }
+  section {
+    font-size: 14px;
+    color: #7e787f;
+    h2 {
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    strong {
+      font-weight: 700;
+      font-family: Gotham;
+      color: #000;
+    }
+    ul, ol {
+      margin: 1.5rem 0;
+     li {
+        margin-bottom: .75rem;
+      }
+    }
+    .speaker {
+      margin-bottom: 2rem;
+      .speaker-name {
+        color: #000;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .fullbar {
+    width: 100%;
+    border-width: 0 0 2px 0;
+    border-color: #e0e0e0;
+    border-style: solid;
+    margin: 0 0 3rem 0
+  }
+  .registro {
+    margin-bottom: 4rem;
+    .bar-title{
+      padding: .5rem 1rem;
+      background: $bluebrand;
+      .container {
+        padding: 0;
+        margin: 0 auto;
+      }
+      h2 {
+        color: #fff;
+        text-transform: uppercase;
+        margin: 0;
+      }
+    }
+  }
+
+  form {
+    ::placeholder {
+      color: $bluebrand;
+      text-transform: uppercase;
+    }
+    fieldset {
+        margin-top: 3rem;
+    }
+    input,
+    textarea,
+    select {
+        color: $bluebrand;
+        width: 100%;
+        margin-bottom: 1.5rem;
+        border: 0;
+        border-bottom: 2px solid $bluebrand;
+        background: none;
+        font-size: 14px;
+        vertical-align: bottom;
+        font-family: 'Montserrat';
+        border-radius: 0;
+    }
+    textarea {
+        width: 100%;
+        max-width: 100%;
+        max-height: 120px;
+        color: $bluebrand;
+    }
+    select {
+        text-transform: uppercase;
+        border: 2px solid;
+        border-radius: 2px;
+        height: 2rem;
+    }
+    .button-submit {
+        text-align: right;
+        margin-bottom: 1rem;
+    }
+    button[type="submit"] {
+        border: 0;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 14px;
+        padding: .5rem 1rem;
+        background-color: $bluebrand;
+        transition: all linear 120ms;
+        &:hover {
+            background-color: darken($bluebrand, 5);
+        }
+    }
+
+    #upload-cv {
+      opacity: 0;
+      width: 1px;
+      height: 1px;
+    }
+    #label-upload-cv {
+      width: 100%;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: $bluebrand;
+      border: 2px solid $bluebrand;
+      padding: 4px 6px 0;
+      text-align: center;
+    }
+  }
+
+  .event-slick {
+    opacity: 0;
+    transition: all linear 125ms;
+    &.slick-initialized {
+      opacity: 1
+    }
+    //botones slider
+    .slick-arrow {
+      border: 0;
+      background-color: transparent;
+      font-size: 0;
+      height: 100%;
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      transform: translateY(-50%);
+      &:focus {
+        outline: none;
+      }
+      &.slick-prev {
+        left: 0;
+        &:before {
+          content: '';
+          display: block;
+          width: 50px;
+          height: 50px;
+          background-image: url('../images/Boton_Izquierda_w.svg');
+          background-position: center;
+          background-size: contain;
+        }
+      }
+      &.slick-next {
+        right: 0;
+        &:before {
+          content: '';
+          display: block;
+          width: 50px;
+          height: 50px;
+          background-image: url('../images/Boton_Derecha_w.svg');
+          background-position: center;
+          background-size: contain;
+        }
+      }
+      //bullets slider
+      .slick-dots {
+        display: flex !important;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        li {
+          margin: 0 .5rem;
+          button {
+            border: 0;
+            background-color: none;
+            &:focus {
+              outline: none;
+            }
+          }
+          &:first-child {
+            margin-left: 0;
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    figure {
+      padding: 0 1rem;
+      background-color: #dfdfdf;
+    }
+  }
+}
+ //mobile
+ @media (max-width: 990px) {
+   #event {
+     .container {
+       padding: 0 .5rem;
+       margin-top: 5rem;
+     }
+     .eventos-anteriores {
+      .container {
+        margin-top: 2rem;
+      }
+     }
+   }
+ }

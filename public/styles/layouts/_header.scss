@@ -1,0 +1,185 @@
+@media (max-width: 1000px) {
+  header.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    .container {
+      padding: 0;
+      width: 100%;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      display: flex;
+      flex-direction: column;
+    }
+    a.navbar-brand {
+      text-align: right;
+      position: relative;
+      margin: 0;
+      padding: .25rem 1rem;
+      background-color: rgba($bluebrand, .965);
+      span.toggleMenuIcon {
+        width: 33px;
+        height: 33px;
+        display: block;
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background: transparent url('http://humancapital-hc.com/wp-content/themes/humancapital/assets/images/icon_menu_white.svg') no-repeat 50%/33px;
+      }
+      img {
+        width: 150px;
+      }
+      &.active + #menu {
+        transform: translateX(-15%)
+      }
+    }
+    #menu {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: rgba($bluebrand, .965);
+      padding-left: 15%;
+      position: absolute;
+      top: 55px;
+      width: 100%;
+      height: calc(100vh - 55px);
+      transition: all linear 250ms;
+      transform: translateX(-100%);
+      .menu-menu-principal-container {
+        overflow: hidden;
+      }
+      ul#menu-menu-principal {
+        position: relative;
+        transform: translateX(-100%);
+        transform: translateX(0%);
+        transition: transform 300ms cubic-bezier(0.32, 0.2, 0.71, 0.89);
+        li {
+          color: #fff;
+          a, span {
+            display: block;
+            color: #fff;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 14px;
+            border-top: 1px solid #fff;
+            padding: .75rem 1.25rem;
+            text-align: center;
+          }
+          &:nth-last-child(1) a, &:nth-last-child(1) span {
+            border-bottom: 1px solid;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1001px) {
+  header.menu {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    .header {
+      //width: 1140px;
+      margin: 0 auto;
+      transition: all 250ms linear;
+      background-color: $bluebrand;
+      box-shadow: 0 2px 31px 0 rgba(0,0,0,.08);
+      border: 0;
+      margin-top: 20px;
+    }
+    nav {
+      display: flex;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        > ul {
+          display: none;
+        }
+      }
+      a {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 14px;
+      }
+    }
+    a.navbar-brand {
+      width: 220px;
+    }
+    a.active {
+      background-color: red;
+    }
+    #menu {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      .menu-menu-principal-container {
+        width: 100%;
+        ul#menu-menu-principal {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          height: 65px;
+          position: relative;
+          li {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 0 .75rem;
+            a, span {
+              display: block;
+              color: #fff;
+              text-transform: uppercase;
+              font-size: 14px;
+            }
+            &:hover {
+              background-color: #083256;
+            }
+            &:hover ul{
+              display: block;
+              position: absolute;
+              top: 100%;
+              left: 0;
+              background-color: $bluebrand;
+              width: 200px;
+            }
+            li {
+              border-bottom: 2px solid #083256;
+              padding-bottom: .5rem;
+              padding-top: .5rem;
+              &:hover {
+                background-color: #083256;
+              }
+            }
+          }
+          > li:nth-last-child(2) {
+            border-right: 2px solid #083256;
+          }
+          > li:nth-last-child(1):hover {
+            background: initial;
+          }
+          > li:nth-child(1) {
+            border-left: 2px solid #083256;
+          }
+        }
+      }
+    }
+  }
+}

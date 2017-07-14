@@ -1,0 +1,56 @@
+//font-family: 'MyWebFont';
+//src: url('webfont.eot'); /* IE9 Compat Modes */
+//src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//     url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
+//     url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
+//     url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+//     url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham-Bold.eot');
+  src: url('../fonts/Gotham-Bold.woff2') format('woff2'),
+       url('../fonts/Gotham-Bold.woff') format('woff'),
+       url('../fonts/Gotham-Bold.ttf') format('truetype'),
+       url('../fonts/Gotham-Bold.svg#Gotham-Bold') format('svg'),
+       url('../fonts/Gotham-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Light.eot');
+  src: url('../fonts/Montserrat-Light.woff2') format('woff2'),
+       url('../fonts/Montserrat-Light.woff') format('woff'),
+       url('../fonts/Montserrat-Light.ttf') format('truetype'),
+       url('../fonts/Montserrat-Light.svg#Montserrat-Light') format('svg'),
+       url('../fonts/Montserrat-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-regular';
+  src: url('../fonts/Montserrat-Regular.eot');
+  src: url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+       url('../fonts/Montserrat-Regular.woff') format('woff'),
+       url('../fonts/Montserrat-Regular.ttf') format('truetype'),
+       url('../fonts/Montserrat-Regular.svg#Montserrat-Regular') format('svg'),
+       url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ferpal';
+  src: url('../fonts/Ferpal-Regular.eot');
+  src: url('../fonts/Ferpal-Regular.woff2') format('woff2'),
+       url('../fonts/Ferpal-Regular.woff') format('woff'),
+       url('../fonts/Ferpal-Regular.ttf') format('truetype'),
+       url('../fonts/Ferpal-Regular.svg#Ferpal-Regular') format('svg'),
+       url('../fonts/Ferpal-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,20 @@
+#protecciondedatos {
+  @media(min-width: 991px) {
+    .container {
+      margin: 8rem auto 4rem;
+      font-size: .9rem;
+    }
+  }
+  .container {
+    h3 {
+      margin: 2rem 0;
+    }
+    p {
+      margin: 1rem 0;
+    }
+    ul {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
