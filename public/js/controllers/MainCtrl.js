@@ -1,6 +1,7 @@
 angular.module('MainCtrl', ['duScroll', 'slickCarousel']).controller('MainController', function($scope, $document, $http, NerdService){
 
     $scope.number = [{label: 1}, {label: 2}, {label: 3}];
+    $scope.flag = false;
     $scope.slickCurrentIndex = 0;
     $scope.slickConfig = {
         dots: true,
@@ -26,7 +27,7 @@ angular.module('MainCtrl', ['duScroll', 'slickCarousel']).controller('MainContro
      method: 'GET',
      url: '/api/slider'
      }).then(function (response) {
-         console.log('SUCCESS: ',response);
+         console.log('SUCCESS SLIDER: ',response);
          if(response.status === 200){
              $scope.slickConfig1Loaded = true;
              $scope.todos = response.data;
@@ -35,6 +36,30 @@ angular.module('MainCtrl', ['duScroll', 'slickCarousel']).controller('MainContro
      // called asynchronously if an error occurs
      // or server returns response with an error status.
      });
+
+    $http({
+     method: 'GET',
+     url: '/api/nosotros'
+     }).then(function (response) {
+         console.log('SUCCESS NOSOTROS: ',response);
+         if(response.status === 200){
+             $scope.flag = true;
+             $scope.nosotros = response.data;
+         }
+     }, function (response) {
+     // called asynchronously if an error occurs
+     // or server returns response with an error status.
+     });
+
+    $scope.animateElementIn = function($el) {
+        $el.removeClass('hidden');
+        $el.addClass('fade-in'); // this example leverages animate.css classes
+    };
+
+    $scope.animateElementOut = function($el) {
+        $el.addClass('hidden');
+        $el.removeClass('fade-in'); // this example leverages animate.css classes
+    };
 
 
 

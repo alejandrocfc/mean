@@ -19,9 +19,3 @@ var Slider = mongoose.model('sliders', {});
 // make this available to our users in our Node applications
 module.exports = Slider;
 
-// define our nerd model
-// module.exports allows us to pass this to other files when it is called
-/*module.exports = mongoose.model('Nerd', {
- name : {type : String, default: ''}
- });*/
-

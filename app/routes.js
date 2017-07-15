@@ -13,6 +13,7 @@ module.exports = function(app) {
     // grab the nerd model we just created
     var Nerd = require('./models/Nerd');
     var Slider = require('./models/Slider');
+    var Nosotros = require('./models/Nosotros');
 
         // server routes ===========================================================
         // handle things like api calls
@@ -44,6 +45,20 @@ module.exports = function(app) {
                 res.send(err);
             }else if(slider.length > 0){
                 res.json(slider); // return all nerds in JSON format
+            }else{res.send({msg:'HELLO'});}
+
+        });
+    });
+
+    app.get('/api/nosotros', function(req, res) {
+        // use mongoose to get all nerds in the database
+        Nosotros.findOne({}, function(err, data) {
+            // if there is an error retrieving, send the error.
+            // nothing after res.send(err) will execute
+            if (err) {
+                res.send(err);
+            }else if(data){
+                res.json(data); // return all nerds in JSON format
             }else{res.send({msg:'HELLO'});}
 
         });

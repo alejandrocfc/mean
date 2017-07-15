@@ -7,6 +7,13 @@
     opacity: 1;
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1); } }
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
 @keyframes appear {
   0% {
     opacity: 0;
@@ -55,30 +62,6 @@ h1, h2, h3, h4, h5, h6 {
 .pattern {
   background: #fff url("../images/Pattern_w.png") repeat; }
 
-@font-face {
-  font-family: 'Gotham';
-  src: url("../fonts/Gotham-Bold.eot");
-  src: url("../fonts/Gotham-Bold.woff2") format("woff2"), url("../fonts/Gotham-Bold.woff") format("woff"), url("../fonts/Gotham-Bold.ttf") format("truetype"), url("../fonts/Gotham-Bold.svg#Gotham-Bold") format("svg"), url("../fonts/Gotham-Bold.eot?#iefix") format("embedded-opentype");
-  font-weight: 700;
-  font-style: normal; }
-@font-face {
-  font-family: 'Montserrat';
-  src: url("../fonts/Montserrat-Light.eot");
-  src: url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.ttf") format("truetype"), url("../fonts/Montserrat-Light.svg#Montserrat-Light") format("svg"), url("../fonts/Montserrat-Light.eot?#iefix") format("embedded-opentype");
-  font-weight: 300;
-  font-style: normal; }
-@font-face {
-  font-family: 'Montserrat-regular';
-  src: url("../fonts/Montserrat-Regular.eot");
-  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.ttf") format("truetype"), url("../fonts/Montserrat-Regular.svg#Montserrat-Regular") format("svg"), url("../fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype");
-  font-weight: 400;
-  font-style: normal; }
-@font-face {
-  font-family: 'Ferpal';
-  src: url("../fonts/Ferpal-Regular.eot");
-  src: url("../fonts/Ferpal-Regular.woff2") format("woff2"), url("../fonts/Ferpal-Regular.woff") format("woff"), url("../fonts/Ferpal-Regular.ttf") format("truetype"), url("../fonts/Ferpal-Regular.svg#Ferpal-Regular") format("svg"), url("../fonts/Ferpal-Regular.eot?#iefix") format("embedded-opentype");
-  font-weight: normal;
-  font-style: normal; }
 @media (max-width: 1000px) {
   header.menu {
     position: fixed;
@@ -160,8 +143,7 @@ h1, h2, h3, h4, h5, h6 {
       transition: all 250ms linear;
       background-color: #003d73;
       box-shadow: 0 2px 31px 0 rgba(0, 0, 0, 0.08);
-      border: 0;
-      margin-top: 20px; }
+      border: 0; }
     header.menu nav {
       display: flex; }
     header.menu ul {
@@ -1568,22 +1550,32 @@ slick {
           background-color: rgba(0, 61, 115, 0.5);
           cursor: pointer; } }
 @media (min-width: 992px) {
+  .fade-in {
+    animation-duration: 2s;
+    /* the duration of the animation */
+    animation-timing-function: ease-out;
+    /* how the animation will behave */
+    animation-delay: 0s;
+    /* how long to delay the animation from starting */
+    animation-iteration-count: 1;
+    /* how many times the animation will play */
+    animation-name: slideInFromLeft;
+    /* the name of the animation we defined above */
+    width: 50%; }
+
   section.uco {
     position: relative;
     background: transparent url("http://humancapital-hc.com/wp-content/themes/humancapital/dist/images/4.png") no-repeat 50%/cover; }
     section.uco .description {
       background-color: #003d73;
-      min-height: 100%;
-      min-height: 100vh;
+      min-height: 87%;
+      min-height: 87vh;
       color: #fff;
       padding: 5rem 7rem 4rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      margin-left: 4rem;
-      opacity: 0;
-      transform: translateX(-50px);
-      transition: all 0.6s ease-out; }
+      margin-left: 4rem; }
       section.uco .description h4 {
         margin: 0;
         color: white;
@@ -1612,9 +1604,6 @@ slick {
         height: 1px;
         background-color: #fff;
         margin-top: 2rem; }
-    section.uco .description.fade-in {
-      opacity: 1;
-      transform: translateX(0); }
     section.uco .more-info {
       position: absolute;
       left: 50%;

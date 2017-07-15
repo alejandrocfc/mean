@@ -1,10 +1,11 @@
 {
-	"name": "angular",
-	"version": "1.0.0",
-	"dependencies": {
-		"bootstrap": "latest",
-		"angular": "latest",
-		"angular-route": "latest",
-		"angular-scroll": "latest"
-	}
+  "name": "angular",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "latest",
+    "angular": "latest",
+    "angular-route": "latest",
+    "angular-scroll": "latest",
+    "angular-scroll-animate": "^0.9.9"
+  }
 }

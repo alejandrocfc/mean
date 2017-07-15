@@ -113,23 +113,30 @@
 
 //desktop
 @media (min-width: 992px) {
+  .fade-in{
+    animation-duration: 2s; /* the duration of the animation */
+    animation-timing-function: ease-out; /* how the animation will behave */
+    animation-delay: 0s; /* how long to delay the animation from starting */
+    animation-iteration-count: 1; /* how many times the animation will play */
+    animation-name: slideInFromLeft; /* the name of the animation we defined above */
+    width: 50%;
+  }
   section.uco {
     position: relative;
     background: transparent url('http://humancapital-hc.com/wp-content/themes/humancapital/dist/images/4.png') no-repeat 50%/cover;
 
     .description {
       background-color: $bluebrand;
-      min-height: 100%;
-      min-height: 100vh;
+      min-height: 87%;
+      min-height: 87vh;
       color: #fff;
       padding: 5rem 7rem 4rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
       margin-left: 4rem;
-      opacity: 0;
-      transform: translateX(-50px);
-      transition: all 0.6s ease-out;
+      //opacity: 0;
+      //transition: all 0.6s ease-out;
       h4 {
         margin: 0;
         color: white;
@@ -164,11 +171,7 @@
         margin-top: 2rem;
       }
     }
-    .description.fade-in{
-      opacity: 1;
-      transform: translateX(0);
-      
-    }
+
     .more-info {
       position: absolute;
       left: 50%;
