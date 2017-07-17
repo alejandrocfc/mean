@@ -1,106 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8" />
-  <base href="/">
-  <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <title>CreeTEC</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/principal.css">
-  <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
-  <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/angular/angular.min.js"></script>
-  <script src="bower_components/angular-route/angular-route.min.js"></script>
-  <script src="bower_components/angular-scroll/angular-scroll.js"></script>
-  <script src="bower_components/slick-carousel/slick/slick.js"></script>
-  <script src="bower_components/angular-slick-carousel/dist/angular-slick.min.js"></script>
-  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="bower_components/angular-scroll-animate/dist/angular-scroll-animate.js"></script>
-  <!-- ANGULAR CUSTOM -->
-  <script src="js/controllers/MainCtrl.js"></script>
-  <script src="js/controllers/NerdCtrl.js"></script>
-  <script src="js/services/NerdService.js"></script>
-  <script src="js/controllers/GeekCtrl.js"></script>
-  <script src="js/services/GeekService.js"></script>
-  <script src="js/appRoutes.js"></script>
-  <script src="js/app.js"></script>
-</head>
-<body ng-app="creetecApp">
-<div class="wrap" ng-controller="MainController">
+  <head>
+    <meta charset="UTF-8" />
+    <base href="/">
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <title>CreeTEC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- STYLES -->
+    <link rel="stylesheet" href="styles/principal.css">
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+    <!-- BOWER COMPONENTS -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/angular-scroll/angular-scroll.js"></script>
+    <script src="bower_components/slick-carousel/slick/slick.js"></script>
+    <script src="bower_components/angular-slick-carousel/dist/angular-slick.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular-scroll-animate/dist/angular-scroll-animate.js"></script>
+    <script src="bower_components/angular-material/angular-material.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+    <!-- ANGULAR CONTROLLERS -->
+    <script src="js/controllers/MainCtrl.js"></script>
+    <script src="js/controllers/NerdCtrl.js"></script>
+    <script src="js/services/NerdService.js"></script>
+    <script src="js/controllers/GeekCtrl.js"></script>
+    <script src="js/services/GeekService.js"></script>
+    <script src="js/controllers/cms/LoginCtrl.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="creetecApp">
 
-  <header class="menu" ng-include="'views/header.html'"></header>
+    <div id="content" ui-view style="min-height: 100%;"></div>
 
-  <div ng-include="'views/slider.html'"></div>
-
-  <section ng-if="flag" class="sectionscroll" id="section-1" ng-include="'views/nosotros.html'"></section>
-
-  <section class="sectionscroll" id="section-2">
-    <h2>Section 1</h2>
-    <p>Bacon ipsum dolor sit amet sausage tail capicola ground round hamburger ham hock. Short ribs pig andouille meatball, pastrami tri-tip fatback ham hock shank kielbasa swine. Rump pancetta jerky kielbasa doner beef ribs tongue hamburger strip steak drumstick andouille shoulder shank flank. Swine drumstick meatball pig beef sausage strip steak.</p>
-
-    <img src="http://lorempixel.com/1000/500/" alt="" />
-  </section>
-
-  <section class="sectionscroll" id="section-3">
-    <h2>Section 3</h2>
-    <p>Shank fatback pastrami short loin, turkey jowl kielbasa ribeye chicken jerky drumstick flank ham. Swine shankle pork belly kielbasa shoulder flank jowl, sirloin doner. Kevin tri-tip bresaola leberkas. Swine ball tip cow strip steak. Ham filet mignon pork chop, pork fatback andouille pork loin shoulder jowl swine strip steak turducken prosciutto rump.</p>
-
-    <img src="http://lorempixel.com/1000/400/" alt="" />
-
-    <p>Tongue tri-tip pastrami, shoulder rump pork belly ground round. Ham hock chuck leberkas doner, strip steak corned beef tri-tip capicola. Rump turkey ham sausage shankle. Flank shankle pork chop ham hock. Shankle venison kielbasa, pancetta swine beef ball tip t-bone bacon hamburger ground round ribeye flank. Turducken bacon bresaola, chicken kevin boudin ball tip strip steak filet mignon pork turkey shank ground round. Kielbasa fatback prosciutto pork chop, jerky ground round leberkas boudin ball tip beef shankle shoulder swine brisket.</p>
-  </section>
-
-  <section class="sectionscroll" id="section-4">
-    <h2>Section 4</h2>
-    <img src="http://lorempixel.com/1000/600/" alt="" />
-
-    <p>Shoulder cow tenderloin chuck, pork chop jerky doner leberkas. Chuck sausage hamburger, kevin beef pork chop pork shoulder ground round ball tip turducken flank. Bresaola tri-tip meatloaf, salami venison tail pig shank shankle jowl sausage brisket cow biltong turducken. Swine turducken hamburger ball tip short loin prosciutto kevin jowl tri-tip. Doner meatloaf pork brisket.</p>
-  </section>
-  <footer>
-    <button ng-click="toTheTop()">Take me back!</button> or <button ng-click="toSection3()">To section 3</button>
-  </footer>
-</div>
-<script>
-</script>
-<!--<script>
-    angular.module('myApp', ['duScroll', 'slickCarousel']).
-      controller('MyCtrl', function($scope, $document){
-
-        $scope.number1 = [1, 2, 3];
-        $scope.slickConfig1Loaded = true;
-        $scope.updateNumber1 = function () {
-            $scope.slickConfig1Loaded = false;
-            $scope.number1[2] = '123';
-            $scope.number1.push(Math.floor((Math.random() * 10) + 100));
-            $timeout(function () {
-                $scope.slickConfig1Loaded = true;
-            }, 5);
-        };
-        $scope.slickCurrentIndex = 0;
-        $scope.slickConfig = {
-            dots: true,
-            autoplay: false,
-            initialSlide: 3,
-            infinite: true,
-            autoplaySpeed: 3000,
-            method: {}
-        };
-
-          $scope.item = 1;
-
-        $scope.toTheTop = function() {
-          $document.scrollTopAnimated(0, 5000).then(function() {
-            console && console.log('You just scrolled to the top!');
-          });
-        };
-        var section3 = angular.element(document.getElementById('section-3'));
-        $scope.toSection3 = function() {
-          $document.scrollToElementAnimated(section3);
-        }
-      }
-    ).value('duScrollOffset', 30);
-</script>-->
-</body>
+  </body>
 </html>

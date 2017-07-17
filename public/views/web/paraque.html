@@ -1,0 +1,35 @@
+<div id="soluciones">
+    <div class="header">
+        <h2>{{paraque.title}}</h2>
+    </div>
+    <section class="tiles">
+        <article class="{{product.class}}" ng-repeat="product in paraque.products">
+            <span class="image">
+                <img src="{{product.imageSmall}}" alt="" />
+            </span>
+            <a ng-click="goToContent(product)">
+                <h2>{{product.title}}</h2>
+                <div class="content">
+                    <p>{{product.description}}</p>
+                </div>
+            </a>
+        </article>
+    </section>
+    <div class="soluciones_content" id="soluciones_content">
+        <div class="section active" style="background-image: url('{{productContent.imageLarge}}');">
+            <div class="container">
+                <div class="icono">
+                    <img src="http://dev.mocionsoft.com/humancapital/wp-content/themes/humancapital/dist/images/Soluciones_Icono.svg">
+                </div>
+                <div class="col-12 nopadding">
+                    <h2 class="title">{{productContent.title}}</h2>
+                    <p>{{productContent.content}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="soluciones_footer">
+        <p>{{paraque.content}}</p>
+        <button>COTIZADOR</button>
+    </div>
+</div>

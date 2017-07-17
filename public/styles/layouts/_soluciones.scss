@@ -1,201 +1,471 @@
 #soluciones {
-    background: $white url('../images/Pattern.png');
-    color: $darkergrey;
 
-    .header-eachpage {
-        h2 {
-          color: #fff;
-          font-size: 5vw;
-          text-align: center;
-          margin: auto;
-        }
-    }
-    .headerr {
-        margin: 2rem 0 0;
-        background-color: transparent;
-        animation: zoomIn .8s 1 forwards;
-        animation-delay: .5s;
-        transform: scale(0);
-        @keyframes zoomIn{
-            0%{
-                transform: scale(0);
-                opacity: 0;
-            }
-            100%{
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-        .iconosol {
-            max-height: 7rem;
-            height: 7rem;
-            img{width: 100%;
-            height: 100%;}
-        }
+    width: 100%;
+    max-width: 68em;
+    margin: 0 auto;
+    padding: 0 2.5em;
+    //colors
+    $white: #ffffff;
+    $color_tickle_me_pink_approx: #f2849e;
+    $color_malibu_approx: #7ecaf6;
+    $color_monte_carlo_approx: #7bd0c1;
+    $color_hopbush_approx: #c75b9b;
+    $color_east_side_approx: #ae85ca;
+    $color_portage_approx: #8499e7;
+    $color_mine_shaft_approx: #333333;
 
-    }
-    .csinglesoluciones {
-        text-align: justify;
-        padding-bottom: 4rem;
-        font-size: 1.3rem;
-        color: grey;
-        h3 {
-          margin: 2rem 0 .5rem;
-          letter-spacing: -1px;
-          text-align: center;
-          width: 100%;
-          color: #003d73;
-          font-size: 2.5rem;
-        }
-        h5 {
-            letter-spacing: -1px;
-            font-size: 1.05rem;
-        }
-        .cintern {
-            margin-top: 0.5rem;
-            margin-bottom: 0.5rem;
-            padding: 0.5rem 1rem .5rem;
-            text-align: left;
-            //margin: .8rem;
-            text-align: left;
-            ul {
-                margin: 0;
-            }
-            ul.dashed {
-                list-style-type: none;
-                letter-spacing: 1px;
-                padding-left: 0;
-            }
-            ul.dashed > li {
-                text-indent: -5px;
-            }
-            ul.dashed > li:before {
-                content: '-';
-                text-indent: -5px;
-                margin: 0.4rem;
-            }
-            li {
-                font-size: .8rem;
-            }
-            &.internre {
-                border: none;
-                color: grey;
-                background-color: transparent;
-                font-size: 1.3rem !important;
-                h4 {
-                    color: $bluebrand;
-                    text-transform: uppercase;
-                }
-                img {
-                    margin: 4rem;
-                    margin-bottom: 6rem;
-                }
-            }
+    //data-uris
+    $data_uri_0: "data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 0.25px%3B stroke: %23ffffff%3B %7D%3C/style%3E%3Cline x1='0' y1='0' x2='100' y2='100' /%3E%3Cline x1='100' y1='0' x2='0' y2='100' /%3E%3C/svg%3E";
 
-        }
-        animation: fadeInUp 1.3s 1;
-        @keyframes fadeInUp{
-            0%{
-                transform: translateY(40px);
-                opacity: 0;
-            }
-            100%{
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-    }
-    div.solucion {
-        background-color: #fff;
-        color: #b0acb1;
-        .container {
-            border-top: 2px solid #cfcfcf;
+    .tiles {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        margin: -2.5em 0 0 -2.5em;
+        article {
+            //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+            transition: transform 0.5s ease, opacity 0.5s ease;
             position: relative;
-            padding-top: 3rem;
-            &:before {
-                content: '';
-                background: #fff url('../images/Separador_g.svg') no-repeat center/450%;
-                width: 40px;
-                height: 40px;
-                display: block;
+            width: calc(33.33333% - 2.5em);
+            margin: 2.5em 0 0 2.5em;
+            > a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+                transition: background-color 0.5s ease, transform 0.5s ease;
                 position: absolute;
                 top: 0;
-                left: 50%;
-                transform: translate(-50%, -50%);
+                left: 0;
+                width: 100%;
+                height: 100%;
+                padding: 1em;
+                //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+                border-radius: 4px;
+                border-bottom: 0;
+                color: $white;
+                text-align: center;
+                text-decoration: none;
+                z-index: 3;
+                &:hover {
+                    color: $white !important;
+                }
+                h2 {
+                    color: $white;
+                    margin: 0;
+                }
+                .content {
+                    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+                    transition: max-height 0.5s ease, opacity 0.5s ease;
+                    width: 100%;
+                    max-height: 0;
+                    line-height: 1.5;
+                    margin-top: 0.35em;
+                    opacity: 0;
+                    > :last-child {
+                        margin-bottom: 0;
+                    }
+                }
+                > :last-child {
+                    margin: 0;
+                }
             }
-            .title {
-                font-size: 1.5rem;
-                letter-spacing: .1rem;
+            > .image {
+
+                //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+                transition: transform 0.5s ease;
+                position: relative;
+                display: block;
+                width: 100%;
+                //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+                border-radius: 4px;
+                overflow: hidden;
+                img {
+                    display: block;
+                    width: 100%;
+                }
+                &:before {
+                    pointer-events: none;
+                    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+                    transition: background-color 0.5s ease, opacity 0.5s ease;
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 1.0;
+                    z-index: 1;
+                    opacity: 0.8;
+                }
+                &:after {
+                    pointer-events: none;
+                    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+                    transition: opacity 0.5s ease;
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: url($data_uri_0);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    opacity: 0.25;
+                    z-index: 2;
+                }
+            }
+            &.style1 > .image:before {
+                background-color: $color_tickle_me_pink_approx;
+            }
+            &.style2 > .image:before {
+                background-color: $color_malibu_approx;
+            }
+            &.style3 > .image:before {
+                background-color: $color_monte_carlo_approx;
+            }
+            &.style4 > .image:before {
+                background-color: $color_hopbush_approx;
+            }
+            &.style5 > .image:before {
+                background-color: $color_east_side_approx;
+            }
+            &.style6 > .image:before {
+                background-color: $color_portage_approx;
             }
         }
-        ::placeholder {
-            color: $bluebrand;
-            text-transform: uppercase;
+        article:hover {
+            cursor: pointer;
+            .content {
+                max-height: 15em;
+                opacity: 1;
+            }
+            > .image {
+                //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+                transform: scale(1.1);
+                &:before {
+                    background-color: $color_mine_shaft_approx;
+                    opacity: 0.35;
+                }
+                &:after {
+                    opacity: 0;
+                }
+            }
         }
-        fieldset {
-            margin-top: 3rem;
+    }
+
+    @media screen and(max-width: 1280px) {
+        .tiles {
+            margin: -1.25em 0 0 -1.25em;
+            article {
+                width: calc(33.33333% - 1.25em);
+                margin: 1.25em 0 0 1.25em;
+            }
         }
-        input,
-        textarea,
-        select {
-            color: $bluebrand;
-            width: 100%;
-            margin-bottom: 1.5rem;
-            border: 0;
-            border-bottom: 2px solid $bluebrand;
-            background: none;
-            font-size: 14px;
-            vertical-align: bottom;
-            font-family: 'Montserrat';
-            border-radius: 0;
+    }
+    @media screen and(max-width: 980px) {
+        .tiles {
+            margin: -2.5em 0 0 -2.5em;
+            article {
+                width: calc(50% - 2.5em);
+                margin: 2.5em 0 0 2.5em;
+            }
         }
-        label[for="exampleTextarea"] {
-            color: $bluebrand;
-            font-size: 14px;
-            padding-left: .75rem;
+    }
+    @media screen and(max-width: 736px) {
+        .tiles {
+            margin: -1.25em 0 0 -1.25em;
+            article {
+                width: calc(50% - 1.25em);
+                margin: 1.25em 0 0 1.25em;
+                &:hover > .image {
+                    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+                    transform: scale(1.0);
+                }
+            }
         }
-        textarea {
-            width: 100%;
-            max-width: 100%;
-            max-height: 120px;
-            color: $bluebrand;
+    }
+    @media screen and(max-width: 480px) {
+        .tiles {
+            margin: 0;
+            article {
+                width: 100%;
+                margin: 1.25em 0 0 0;
+            }
         }
-        select {
-            text-transform: uppercase;
-            border: 2px solid;
-            border-radius: 2px;
-            height: 2rem;
-        }
-        .button-submit {
-            text-align: right;
+    }
+
+
+
+    * + .tiles {
+        margin-top: 2em;
+    }
+
+    .soluciones_content {
+        margin-top: 2em;
+        background: lightpink;
+        height: 75%;
+        height: 75vh;
+        width: 100%;
+        > .section {
+            background: transparent no-repeat 50%/cover;
+            text-align: center;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 3.8rem;
+            .icono {
+                img{
+                    height: 85px;
+                    height: 12vh;
+                }
+            }
+            h2.title {
+                color: $bluebrand;
+                text-align: center;
+                text-transform: uppercase;
+                margin: 0 auto .5rem;
+                font-size: 61px;
+                font-size: 4.5vw;
+                line-height: 1.1;
+            }
             p {
-                width: 200px;
-                margin-left: auto;
+                text-align: center;
+                color: $white;
+                width: 80%;
+                margin: 0 auto 1.5rem;
+            }
+            .ver-mas {
+                border: 1px solid white;
+                color: white;
+                width: 150px;
+                padding: .35rem .5rem .25rem;
+                display: inline-block;
+                align-self: center;
+                &:hover {
+                    border: 1px solid $bluebrand;
+                    background-color: $bluetrans;
+                    cursor: pointer;
+                }
             }
         }
-        input[type="submit"] {
-            border: 0;
-            text-transform: uppercase;
-            color: #fff;
-            font-size: 14px;
-            padding: .5rem 1rem;
-            background-color: $bluebrand;
-            transition: all linear 120ms;
-            &:hover {
-                background-color: darken($bluebrand, 5);
+        > .section:not(.soluciones) {
+            h2.title {
+                color: #fff;
             }
         }
+        > .section.active {
+            display: flex;
+        }
+
     }
-    .color0 {
-        color: black;
-    }
-    .f-w7 {
-        font-weight: 700;
-    }
-    .tcenter {
-        text-align: center;
-    }
-    .no-bg {
-        background-color: transparent;
+
+}
+/*#soluciones {
+/*background: $white url('../images/Pattern.png');
+color: $darkergrey;
+
+.header-eachpage {
+    h2 {
+      color: #fff;
+      font-size: 5vw;
+      text-align: center;
+      margin: auto;
     }
 }
+.headerr {
+    margin: 2rem 0 0;
+    background-color: transparent;
+    animation: zoomIn .8s 1 forwards;
+    animation-delay: .5s;
+    transform: scale(0);
+    @keyframes zoomIn{
+        0%{
+            transform: scale(0);
+            opacity: 0;
+        }
+        100%{
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+    .iconosol {
+        max-height: 7rem;
+        height: 7rem;
+        img{width: 100%;
+        height: 100%;}
+    }
+
+}
+.csinglesoluciones {
+    text-align: justify;
+    padding-bottom: 4rem;
+    font-size: 1.3rem;
+    color: grey;
+    h3 {
+      margin: 2rem 0 .5rem;
+      letter-spacing: -1px;
+      text-align: center;
+      width: 100%;
+      color: #003d73;
+      font-size: 2.5rem;
+    }
+    h5 {
+        letter-spacing: -1px;
+        font-size: 1.05rem;
+    }
+    .cintern {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        padding: 0.5rem 1rem .5rem;
+        text-align: left;
+        //margin: .8rem;
+        text-align: left;
+        ul {
+            margin: 0;
+        }
+        ul.dashed {
+            list-style-type: none;
+            letter-spacing: 1px;
+            padding-left: 0;
+        }
+        ul.dashed > li {
+            text-indent: -5px;
+        }
+        ul.dashed > li:before {
+            content: '-';
+            text-indent: -5px;
+            margin: 0.4rem;
+        }
+        li {
+            font-size: .8rem;
+        }
+        &.internre {
+            border: none;
+            color: grey;
+            background-color: transparent;
+            font-size: 1.3rem !important;
+            h4 {
+                color: $bluebrand;
+                text-transform: uppercase;
+            }
+            img {
+                margin: 4rem;
+                margin-bottom: 6rem;
+            }
+        }
+
+    }
+    animation: fadeInUp 1.3s 1;
+    @keyframes fadeInUp{
+        0%{
+            transform: translateY(40px);
+            opacity: 0;
+        }
+        100%{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+div.solucion {
+    background-color: #fff;
+    color: #b0acb1;
+    .container {
+        border-top: 2px solid #cfcfcf;
+        position: relative;
+        padding-top: 3rem;
+        &:before {
+            content: '';
+            background: #fff url('../images/Separador_g.svg') no-repeat center/450%;
+            width: 40px;
+            height: 40px;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .title {
+            font-size: 1.5rem;
+            letter-spacing: .1rem;
+        }
+    }
+    ::placeholder {
+        color: $bluebrand;
+        text-transform: uppercase;
+    }
+    fieldset {
+        margin-top: 3rem;
+    }
+    input,
+    textarea,
+    select {
+        color: $bluebrand;
+        width: 100%;
+        margin-bottom: 1.5rem;
+        border: 0;
+        border-bottom: 2px solid $bluebrand;
+        background: none;
+        font-size: 14px;
+        vertical-align: bottom;
+        font-family: 'Montserrat';
+        border-radius: 0;
+    }
+    label[for="exampleTextarea"] {
+        color: $bluebrand;
+        font-size: 14px;
+        padding-left: .75rem;
+    }
+    textarea {
+        width: 100%;
+        max-width: 100%;
+        max-height: 120px;
+        color: $bluebrand;
+    }
+    select {
+        text-transform: uppercase;
+        border: 2px solid;
+        border-radius: 2px;
+        height: 2rem;
+    }
+    .button-submit {
+        text-align: right;
+        p {
+            width: 200px;
+            margin-left: auto;
+        }
+    }
+    input[type="submit"] {
+        border: 0;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 14px;
+        padding: .5rem 1rem;
+        background-color: $bluebrand;
+        transition: all linear 120ms;
+        &:hover {
+            background-color: darken($bluebrand, 5);
+        }
+    }
+}
+.color0 {
+    color: black;
+}
+.f-w7 {
+    font-weight: 700;
+}
+.tcenter {
+    text-align: center;
+}
+.no-bg {
+    background-color: transparent;
+}
+}*/
+

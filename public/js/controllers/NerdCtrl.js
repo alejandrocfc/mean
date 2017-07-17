@@ -2,6 +2,7 @@ angular.module('NerdCtrl', []).controller('NerdController', function($scope, $ht
 
     // $http.get('/api/nerds');
 
+    console.log('HI FROM NERDS');
     NerdService.get().then(function(res){
         console.log(res);
     }, function errorCallback(argument) {

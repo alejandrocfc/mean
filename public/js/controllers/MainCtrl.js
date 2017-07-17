@@ -1,4 +1,4 @@
-angular.module('MainCtrl', ['duScroll', 'slickCarousel']).controller('MainController', function($scope, $document, $http, NerdService){
+angular.module('MainCtrl', ['duScroll', 'slickCarousel']).controller('MainController', function($scope, $document, $http, $state, NerdService){
 
     $scope.number = [{label: 1}, {label: 2}, {label: 3}];
     $scope.flag = false;
@@ -18,9 +18,17 @@ angular.module('MainCtrl', ['duScroll', 'slickCarousel']).controller('MainContro
             console && console.log('You just scrolled to the top!');
         });
     };
-    var section3 = angular.element(document.getElementById('section-3'));
+
     $scope.toSection3 = function() {
+        var section3 = angular.element(document.querySelector("#section-3"));
+        console.log(section3);
         $document.scrollToElementAnimated(section3);
+    };
+
+    $scope.goToContent = function (product) {
+        var section = angular.element(document.getElementById('soluciones_content'));
+        $scope.productContent = product;
+        $document.scrollToElementAnimated(section, [], 1500);
     };
 
     $http({
@@ -51,6 +59,19 @@ angular.module('MainCtrl', ['duScroll', 'slickCarousel']).controller('MainContro
      // or server returns response with an error status.
      });
 
+    $http({
+        method: 'GET',
+        url: '/api/paraque'
+    }).then(function (response) {
+        console.log('SUCCESS PARAQUE: ',response);
+        if(response.status === 200){
+            $scope.paraque = response.data;
+        }
+    }, function (response) {
+        // called asynchronously if an error occurs
+        // or server returns response with an error status.
+    });
+
     $scope.animateElementIn = function($el) {
         $el.removeClass('hidden');
         $el.addClass('fade-in'); // this example leverages animate.css classes
@@ -59,6 +80,10 @@ angular.module('MainCtrl', ['duScroll', 'slickCarousel']).controller('MainContro
     $scope.animateElementOut = function($el) {
         $el.addClass('hidden');
         $el.removeClass('fade-in'); // this example leverages animate.css classes
+    };
+
+    $scope.go = function () {
+        $state.go('about');
     };
 
 

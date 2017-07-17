@@ -6,6 +6,8 @@
     "angular": "latest",
     "angular-route": "latest",
     "angular-scroll": "latest",
-    "angular-scroll-animate": "^0.9.9"
+    "angular-scroll-animate": "^0.9.9",
+    "angular-ui-router": "^1.0.5",
+    "angular-material": "master"
   }
 }
