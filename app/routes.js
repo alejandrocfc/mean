@@ -19,7 +19,7 @@ module.exports = function(app, passport) {
 
     // PROFILE SECTION =========================
     app.get('/profile', isLoggedIn, function(req, res) {
-
+        res.sendFile('nerd.html');
     });
 
     // LOGOUT ==============================
@@ -28,22 +28,17 @@ module.exports = function(app, passport) {
         res.redirect('/');
     });
 
-// =============================================================================
-// AUTHENTICATE (FIRST LOGIN) ==================================================
-// =============================================================================
-
-    // locally --------------------------------
-    // LOGIN ===============================
-    // show the login form
-    app.get('/login', function(req, res) {
+    // LOGIN ===================================
+    app.post('/api/login', function(req, res, next) {
+        passport.authenticate('local-login', function(err, user, info) {
+            if (err) { return res.send('1') }
+            if (!user) { return res.send('0'); }
+            req.logIn(user, function(err) {
+                if (err) { return next(err); }
+                return res.send('2');
+            });
+        })(req, res, next);
     });
-
-    // process the login form
-    app.post('/api/login', passport.authenticate('local-login', {
-        successRedirect : '/profile', // redirect to the secure profile section
-        failureRedirect : '/login', // redirect back to the signup page if there is an error
-        failureFlash : true // allow flash messages
-    }));
 
         // server routes ===========================================================
         // handle things like api calls

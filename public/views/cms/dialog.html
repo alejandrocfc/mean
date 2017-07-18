@@ -1,0 +1,30 @@
+<md-dialog aria-label="Editar" class="dialog-95" style="    width: 100%;">
+    <form name="inputForm" novalidate>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <md-button class="md-icon-button" ng-click="regresar()">
+                    <md-icon md-svg-src="../images/back.svg" aria-label="Regresar"></md-icon>
+                    <md-tooltip md-delay="1500" md-autohide="true">Regresar</md-tooltip>
+                </md-button>
+                <h2>{{view.operacion}}</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="borrar()" ng-show="view.operacion === 'Modificar'">
+                    <md-icon md-svg-icon="white_delete" aria-label="Borrar"></md-icon>
+                    <md-tooltip md-delay="1500" md-autohide="true">Borrar</md-tooltip>
+                </md-button>
+                <md-button class="md-icon-button" ng-click="guardar()" ng-show="view.operacion === 'Agregar' || view.operacion === 'Modificar'" ng-disabled="inputForm.$invalid">
+                    <md-icon md-svg-icon="white_save" aria-label="Guardar"></md-icon>
+                    <md-tooltip md-delay="1500" md-autohide="true">Guardar</md-tooltip>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <md-content layout="column" layout-padding ng-cloak>
+                <label>Contenido</label>
+                <div class="termsArea">
+                    <div text-angular ng-model="speaker.info.description"></div>
+                </div>
+            </md-content>
+        </md-dialog-content>
+    </form>
+</md-dialog>

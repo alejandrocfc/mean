@@ -1,0 +1,59 @@
+<md-content class="md-padding" layout="column">
+        <md-card ng-repeat="slider in sliders | orderBy:'position'">
+            <img ng-src="{{slider.image}}" class="md-card-image" alt="Washed Out">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">{{slider.content}}</span>
+                    <span class="md-subhead">Position: {{slider.position}}</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-actions layout="row" layout-align="end center">
+                <md-button class="md-icon-button" aria-label="Edit" ng-click="mostrarDialogo('UD', element, $event)">
+                    <ng-md-icon icon="edit"></ng-md-icon>
+                </md-button>
+                <md-button class="md-icon-button" aria-label="Delete">
+                    <ng-md-icon icon="delete"></ng-md-icon>
+                </md-button>
+            </md-card-actions>
+        </md-card>
+                <!--<md-card>
+                    <img ng-src="http://lorempixel.com/152/152/business/1" class="md-card-image" alt="Washed Out">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">Card with image</span>
+                            <span class="md-subhead">Position: 1</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                    <md-card-actions layout="row" layout-align="end center">
+                        <md-button class="md-icon-button" aria-label="Edit">
+                            <ng-md-icon icon="edit"></ng-md-icon>
+                        </md-button>
+                        <md-button class="md-icon-button" aria-label="Delete">
+                            <ng-md-icon icon="delete"></ng-md-icon>
+                        </md-button>
+                    </md-card-actions>
+                </md-card>
+                <md-card md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch>
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">Card with image</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                </md-card>
+                <md-card md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch>
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">Card with image</span>
+                            <span class="md-subhead">Extra Large</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                </md-card>
+                <md-card md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch>
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">Card with image</span>
+                            <span class="md-subhead">Extra Large</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                </md-card>-->
+</md-content>

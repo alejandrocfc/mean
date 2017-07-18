@@ -1,0 +1,24 @@
+<div layout-fill style="height:100vh">
+    <md-content style="height:100%;">
+        <md-tabs flex layout-fill md-selected="selectedIndex" md-border-bottom md-autoselect>
+            <md-tab ng-repeat="tab in tabs"
+                    ng-disabled="tab.disabled"
+                    label="{{tab.title}}">
+                <md-tab-content flex layout-fill>
+                <!--<div class="demo-tab tab{{$index%4}}" style="padding: 25px; text-align: center; position: fixed">-->
+                    <!--<div ng-bind="tab.content"></div>-->
+                    <div style="position: relative" ng-include="getInclude(tab)"></div>
+                <!--</div>-->
+                </md-tab-content>
+                <md-button ng-if="tab.title === 'Slider'" class="md-fab md-fab-bottom-right" aria-label="Nuevo" ng-click="mostrarDialogo('C', undefined, $event)">
+                    <!--<ng-md-icon icon="add"></ng-md-icon>-->
+                    <md-icon md-font-icon="delete"></md-icon>
+                    <!--<md-icon md-font-library="material-icons">face</md-icon>-->
+                    <md-icon md-svg-icon="white_person_add"></md-icon>
+                </md-button>
+            </md-tab>
+        </md-tabs>
+    </md-content>
+
+</div>
+

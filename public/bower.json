@@ -8,6 +8,8 @@
     "angular-scroll": "latest",
     "angular-scroll-animate": "^0.9.9",
     "angular-ui-router": "^1.0.5",
-    "angular-material": "master"
+    "angular-material": "master",
+    "material-design-icons": "^3.0.1",
+    "textAngular": "^1.5.16"
   }
 }

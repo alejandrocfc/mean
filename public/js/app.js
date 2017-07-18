@@ -1,4 +1,5 @@
-var cms = angular.module('creetecApp', ['ui.router', 'ngMaterial', 'ngRoute', 'MainCtrl', 'NerdCtrl', 'LoginCtrl', 'NerdService', 'GeekCtrl', 'GeekService', 'angular-scroll-animate']);
+var cms = angular.module('creetecApp', ['ui.router', 'ngMaterial', 'ngRoute', 'MainCtrl', 'NerdCtrl', 'LoginCtrl', 'MainCMSCtrl',
+    'NerdService', 'GeekCtrl', 'GeekService', 'angular-scroll-animate', 'ngMdIcons', 'textAngular']);
 /*var cms = angular.module("cms",
     ['ngStorage','ui.router', 'oc.lazyLoad','ngAnimate','ngFileUpload',
         '720kb.datepicker',  'angular.filter',   'firebase', 'leaflet-directive',
@@ -33,6 +34,11 @@ cms.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
             url:'login',
             templateUrl: '../views/cms/login.html',
             controller: 'LoginCtrl'
+        })
+        .state('cms.main', {
+            url:'main',
+            templateUrl: '../views/cms/main.cms.html',
+            controller: 'MainCMSCtrl'
         })
 
 }]);

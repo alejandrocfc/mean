@@ -4,9 +4,6 @@ angular.module('LoginCtrl', []).controller('LoginCtrl', function($scope, $http, 
 
     $scope.submit = function(){
 
-        console.log('SUBMIT !!!');
-        console.log($scope.form);
-
         var data = {
             email: $scope.form.username,
             password: $scope.form.password
@@ -24,7 +21,14 @@ angular.module('LoginCtrl', []).controller('LoginCtrl', function($scope, $http, 
             url: '/api/login',
             config: config
         }).then(function (response) {
-            console.log('SUCCESS LOGGIN: ',response);
+            console.log('SUCCESS LOGGIN: ',response.data);
+            if(response.data === '0'){
+                console.log('USER NOT FOUND');
+            }else if(response.data === '1'){
+                console.log('PASSWORD WRONG');
+            }else if(response.data === '2'){
+                $state.go('cms.main');
+            }
         }, function (response) {
             console.log('ERROR LOGGIN: ',response);
             // called asynchronously if an error occurs

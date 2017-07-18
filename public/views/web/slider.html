@@ -1,5 +1,5 @@
 <slick ng-if="slickConfig1Loaded">
-    <div ng-repeat="i in todos">
+    <div ng-repeat="i in todos | orderBy:'position'">
         <div class="info">
             <h2 class="entry-title">{{ i.content }}</h2>
         </div>
